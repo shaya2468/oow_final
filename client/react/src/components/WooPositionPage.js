@@ -6,6 +6,7 @@ import WooStandard from './WooStandard';
 import WooImportantActions from './WooImportantActions';
 import WooAddress from './WooAddress';
 import WooWordyComponent from './WooWordyComponent';
+import WooList from './WooList';
 
 export default class WooLoginPage extends React.Component {
 
@@ -49,6 +50,11 @@ export default class WooLoginPage extends React.Component {
               secondSentance={this.state.product.sentance2}
               twoImages={this.state.product.images}
               />
+          <WooList orderedLists=
+          {[{list: this.state.descriptionsList ,listTitle: "Position Description and Responsibilities"},
+            {list: this.state.requirementsList,listTitle: "Position Requirements"}]} 
+            title={"About the " + this.state.positionName + " position"} 
+            />
        </div>
       );
     }
@@ -65,6 +71,8 @@ export default class WooLoginPage extends React.Component {
     let address = company.address;
     let about = company.about;
     let product = position.product;
+    let descriptionsList = position.descriptions;
+    let requirementsList = position.requirements;
     this.setState(() => ({
       isLoadingData: false,
       companyName,
@@ -74,7 +82,9 @@ export default class WooLoginPage extends React.Component {
       note,
       address,
       about,
-      product
+      product,
+      descriptionsList,
+      requirementsList
     }));
   };
 }
