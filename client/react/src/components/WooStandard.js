@@ -39,11 +39,8 @@ export default class WooStandard extends React.Component {
                     }
                     
                     <div id="note-from-company">
-                        <h1>Notes from Google:</h1>
-                        <h2>We can relocate you to our Berlin office but with your current job position. There will be an option for
-                    you to get promoted after a short while.
-                </h2>
-
+                        <h1>Notes from {this.props.companyName}:</h1>
+                        <h2>{this.props.note}</h2>
                     </div>
                 </div>
             </div>
