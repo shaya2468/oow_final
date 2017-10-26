@@ -2,7 +2,7 @@ import React from 'react';
 import AuthAPI from '../actions/auth';
 
 import {
-  Redirect,  Route,
+  Redirect, Route,
   Link
 } from 'react-router-dom'
 
@@ -12,7 +12,7 @@ export default class WooLoginPage extends React.Component {
     super(props);
 
     this.state = {
-      loggedIn:false
+      loggedIn: false
     };
   }
 
@@ -21,29 +21,43 @@ export default class WooLoginPage extends React.Component {
   };
 
   onLoginSuccess = (e) => {
-    this.setState(() => ({ loggedIn:true }));
+    this.setState(() => ({ loggedIn: true }));
     localStorage.setItem("token", "uyty");
   };
 
+  onSubmit = (e) => {
+    e.preventDefault();
 
+    console.log('onSubmit !! done')
+  };
 
   render() {
 
-    if (this.state.loggedIn){
+    if (this.state.loggedIn) {
       return (
         <Redirect to={{
           pathname: '/dashboard'
-        }}/>
+        }} />
       );
     }
     return (
 
-      
-      <div>
-        This is the LOGIN page! {this.state.loggedIn ? 'aaa' : 'bbb'}
-        <button onClick={this.startLogin}>login</button>
+
+
+      <div id="login-page">
+        <form onSubmit={this.onSubmit}>
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" required placeholder="Your name.."></input>
+
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" required placeholder="Your last name.."></input>
+
+          <input type="submit" value="Submit"></input>
+        </form>
       </div>
+
+
     )
-    
+
   }
 }
