@@ -4,6 +4,7 @@ import WooTitle from './WooTitle';
 import WooMainPart from './WooMainPart';
 import WooStandard from './WooStandard';
 import WooImportantActions from './WooImportantActions';
+import WooAddress from './WooAddress';
 
 export default class WooLoginPage extends React.Component {
 
@@ -39,24 +40,29 @@ export default class WooLoginPage extends React.Component {
           <WooMainPart companyName={this.state.companyName} positionName={this.state.positionName}/>
           <WooStandard standards={this.state.standards} note={this.state.note} companyName={this.state.companyName}/>
           <WooImportantActions/>
+          <WooAddress address={this.state.address}/>
        </div>
       );
     }
   }
 
   initState = (position) => {
-    let companyName = position.company.name;
+    let company = position.company;
+
+    let companyName = company.name;
     let positionName = position.name;
-    let companyLogo = position.company.logo;
+    let companyLogo = company.logo;
     let standards = position.standards;
     let note = position.note;
+    let address = company.address;
     this.setState(() => ({
       isLoadingData: false,
       companyName,
       positionName,
       companyLogo,
       standards,
-      note
+      note,
+      address
     }));
   };
 }
