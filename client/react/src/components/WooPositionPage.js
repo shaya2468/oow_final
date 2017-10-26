@@ -8,17 +8,19 @@ export default class WooLoginPage extends React.Component {
     super(props);
 
     this.state = {
-      isLoadingData: true
+      isLoadingData: true,
+      companyName: null,
+      positionName: null
+
     };
   }
 
   componentDidMount = () => {
     AuthAPI.getData().then((res) => {
-      var data = res.data._embedded.positions[0]
-      console.log(JSON.stringify(data));
-      this.setState(() => ({ isLoadingData: false }));
+      var position = res.data._embedded.positions[0]
+      console.log(JSON.stringify(position));
+      this.initState(position)
     })
-
   };
 
   render() {
@@ -29,8 +31,18 @@ export default class WooLoginPage extends React.Component {
       )
     } else {
       return (
-        <WooTitle/>
+        <WooTitle positionTitle={this.state.positionName}/>
       );
     }
   }
+
+  initState = (position) => {
+    let company = position.company.name;
+    let positionName = position.name;
+    this.setState(() => ({ 
+      isLoadingData: false,
+      companyName: company,
+      positionName: positionName
+    }));
+  };
 }
