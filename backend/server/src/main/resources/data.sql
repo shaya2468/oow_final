@@ -5,7 +5,7 @@ insert into press(id)
 values(90001);
 
 insert into about(id, title, employees_num, founded, funding) 
-values(80001, 'Lorem ipsum dolor, sit amet consectetu', 45, 2010, '5M$ in 7 rounds');
+values(80001, 'Yellow Leaf Hammocks tells users about its product by describing how the hammocks empower artisan weavers and their families, sit amet consectetu', 45, 2010, '5M$ in 7 rounds');
 
 insert into product(id, title, sentance1, sentance2) 
 values(60002, 'killer title Lorem ipsum dolor, sit amet consectetu', 'killer first sentance Lorem ipsum dolor, sit amet consectetu', 'Second Sentance Lorem ipsum dolor, sit amet consectetu');

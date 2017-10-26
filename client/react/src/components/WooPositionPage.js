@@ -42,7 +42,7 @@ export default class WooLoginPage extends React.Component {
           <WooStandard standards={this.state.standards} note={this.state.note} companyName={this.state.companyName}/>
           <WooImportantActions/>
           <WooAddress address={this.state.address}/>
-          <WooWordyComponent about={this.state.about}/>
+          <WooWordyComponent about={this.state.about} title={"About us"} subtitle={this.state.about.title}/>
        </div>
       );
     }

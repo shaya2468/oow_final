@@ -3,11 +3,8 @@ import React from 'react';
 const WooWordyComponent = (props) => (
 
     <div className="section-info">
-        <h1 className="section-title">About us</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum
-        excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo
-        voluptatibus?
-    </p>
+        <h1 className="section-title">{props.title}</h1>
+        <p>{props.subtitle}</p>
         {
             props.about && <BigPoint about={props.about} />
         }
