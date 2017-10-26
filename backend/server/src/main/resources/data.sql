@@ -10,8 +10,8 @@ values(80001, 'Lorem ipsum dolor, sit amet consectetu', 45, 2010, '5M$ in 7 roun
 insert into product(id, title, sentance1, sentance2) 
 values(60002, 'killer title Lorem ipsum dolor, sit amet consectetu', 'killer first sentance Lorem ipsum dolor, sit amet consectetu', 'Second Sentance Lorem ipsum dolor, sit amet consectetu');
 
-insert into company(id, name, main_image, address_id, about_id, press_id) 
-values(20001,'Google', 'https://goo.gl/R9xakP', 40002, 80001, 90001);
+insert into company(id, name, logo, main_image, address_id, about_id, press_id) 
+values(20001,'Google', 'https://goo.gl/re5wjf', 'https://goo.gl/R9xakP', 40002, 80001, 90001);
 
 insert into link(id, name, link, company_id) 
 values(10001,'twitter', 'www.twitter.com', 20001);

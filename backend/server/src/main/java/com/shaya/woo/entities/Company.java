@@ -23,6 +23,8 @@ public class Company {
 
 	@Column(name = "main_image")
 	private String mainImage;
+	
+	private String logo;
 
 	@OneToMany(mappedBy = "company")
 	private List<Link> links = new ArrayList<>();
@@ -157,4 +159,11 @@ public class Company {
 		this.benefits = benefits;
 	}
 
+	public String getLogo() {
+		return logo;
+	}
+
+	public void setLogo(String logo) {
+		this.logo = logo;
+	}
 }
