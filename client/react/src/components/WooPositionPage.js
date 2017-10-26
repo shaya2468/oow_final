@@ -43,6 +43,11 @@ export default class WooLoginPage extends React.Component {
           <WooImportantActions/>
           <WooAddress address={this.state.address}/>
           <WooWordyComponent about={this.state.about} title={"About us"} subtitle={this.state.about.title}/>
+          <WooWordyComponent  title={"Our product"} 
+              subtitle={this.state.product.title} 
+              firstSentance={this.state.product.sentance1}
+              secondSentance={this.state.product.sentance2}
+              />
        </div>
       );
     }
@@ -58,6 +63,7 @@ export default class WooLoginPage extends React.Component {
     let note = position.note;
     let address = company.address;
     let about = company.about;
+    let product = position.product;
     this.setState(() => ({
       isLoadingData: false,
       companyName,
@@ -66,7 +72,8 @@ export default class WooLoginPage extends React.Component {
       standards,
       note,
       address,
-      about
+      about,
+      product
     }));
   };
 }

@@ -4,7 +4,15 @@ const WooWordyComponent = (props) => (
 
     <div className="section-info">
         <h1 className="section-title">{props.title}</h1>
-        <p>{props.subtitle}</p>
+        {
+            props.subtitle && <p>{props.subtitle}</p>
+        }
+        {
+            props.firstSentance && <p>{props.firstSentance}</p>
+        }
+        {
+            props.secondSentance && <p>{props.secondSentance}</p>
+        }
         {
             props.about && <BigPoint about={props.about} />
         }
