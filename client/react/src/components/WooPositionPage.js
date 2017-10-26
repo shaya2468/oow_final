@@ -1,6 +1,7 @@
 import React from 'react';
 import AuthAPI from '../actions/auth';
 import WooTitle from './WooTitle';
+import WooMainPart from './WooMainPart';
 
 export default class WooLoginPage extends React.Component {
 
@@ -31,7 +32,12 @@ export default class WooLoginPage extends React.Component {
       )
     } else {
       return (
-        <WooTitle positionTitle={this.state.positionName} companyLogo={this.state.companyLogo}/>
+        <div id="body-position">
+          <WooTitle positionName={this.state.positionName} companyLogo={this.state.companyLogo} />
+          <WooMainPart companyName={this.state.companyName} positionName={this.state.positionName}/>
+       </div>
+
+
       );
     }
   }
@@ -40,7 +46,7 @@ export default class WooLoginPage extends React.Component {
     let companyName = position.company.name;
     let positionName = position.name;
     let companyLogo = position.company.logo;
-    this.setState(() => ({ 
+    this.setState(() => ({
       isLoadingData: false,
       companyName,
       positionName,
