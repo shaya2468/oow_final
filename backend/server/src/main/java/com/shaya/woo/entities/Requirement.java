@@ -20,7 +20,7 @@ public class Requirement {
 	
 	@ManyToOne
 	@JsonIgnore
-	private Company company;
+	private Position position;
 
 	protected Requirement(){}
 	

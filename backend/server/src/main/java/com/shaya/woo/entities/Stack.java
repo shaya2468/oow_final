@@ -20,7 +20,7 @@ public class Stack {
 	
 	@ManyToOne
 	@JsonIgnore
-	private Company company;
+	private Position position;
 
 	protected Stack(){}
 	

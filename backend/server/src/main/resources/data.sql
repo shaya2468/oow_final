@@ -44,24 +44,24 @@ insert into standard(id, name, met, position_id)
 values(70003,'Company Speciality', false, 50002);
 
 
-insert into description(id, name, company_id) 
-values(11001,'Build cool stuff Lorem ipsum dolor, sit amet consectetu', 20001);
-insert into description(id, name, company_id) 
-values(11002,'Understand repeatable automated processes Lorem ipsum dolor, sit amet consectetu', 20001);
+insert into description(id, name, position_id) 
+values(11001,'Build cool stuff Lorem ipsum dolor, sit amet consectetu', 50002);
+insert into description(id, name, position_id) 
+values(11002,'Understand repeatable automated processes Lorem ipsum dolor, sit amet consectetu', 50002);
 
-insert into requirement(id, name, company_id) 
-values(22001,'Must - deep knowledge of Python Lorem ipsum dolor, sit amet consectetu', 20001);
-insert into requirement(id, name, company_id) 
-values(22002,'Advantage - experience with Celery Lorem ipsum dolor, sit amet consectetu', 20001);
+insert into requirement(id, name, position_id) 
+values(22001,'Must - deep knowledge of Python Lorem ipsum dolor, sit amet consectetu', 50002);
+insert into requirement(id, name, position_id) 
+values(22002,'Advantage - experience with Celery Lorem ipsum dolor, sit amet consectetu', 50002);
 
-insert into stack(id, name, company_id) 
-values(33001,'Server side: Java', 20001);
-insert into stack(id, name, company_id) 
-values(33002,'Front end: React', 20001);
+insert into stack(id, name, position_id) 
+values(33001,'Server side: Java', 50002);
+insert into stack(id, name, position_id) 
+values(33002,'Front end: React', 50002);
 
-insert into benefit(id, name, company_id) 
-values(44001,'Ability to work independently Lorem ipsum dolor, sit amet consectetu', 20001);
-insert into benefit(id, name, company_id) 
-values(44002,'Portfolio of code you have Lorem ipsum dolor, sit amet consectetu', 20001);
+insert into benefit(id, name, position_id) 
+values(44001,'Ability to work independently Lorem ipsum dolor, sit amet consectetu', 50002);
+insert into benefit(id, name, position_id) 
+values(44002,'Portfolio of code you have Lorem ipsum dolor, sit amet consectetu', 50002);
 
 

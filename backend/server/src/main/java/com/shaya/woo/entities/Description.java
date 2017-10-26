@@ -20,7 +20,7 @@ public class Description {
 	
 	@ManyToOne
 	@JsonIgnore
-	private Company company;
+	private Position position;
 
 	protected Description(){}
 	

@@ -20,7 +20,7 @@ public class Benefit {
 	
 	@ManyToOne
 	@JsonIgnore
-	private Company company;
+	private Position position;
 
 	protected Benefit(){}
 	

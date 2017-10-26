@@ -23,23 +23,11 @@ public class Company {
 
 	@Column(name = "main_image")
 	private String mainImage;
-	
+
 	private String logo;
 
 	@OneToMany(mappedBy = "company")
 	private List<Link> links = new ArrayList<>();
-
-	@OneToMany(mappedBy = "company")
-	private List<Description> descriptions = new ArrayList<>();
-
-	@OneToMany(mappedBy = "company")
-	private List<Requirement> requirements = new ArrayList<>();
-
-	@OneToMany(mappedBy = "company")
-	private List<Stack> stacks = new ArrayList<>();
-	
-	@OneToMany(mappedBy = "company")
-	private List<Benefit> benefits = new ArrayList<>();
 
 	@OneToMany(mappedBy = "company")
 	private List<Image> images = new ArrayList<>();
@@ -125,38 +113,6 @@ public class Company {
 
 	public void setPositions(List<Position> positions) {
 		this.positions = positions;
-	}
-
-	public List<Description> getDescriptions() {
-		return descriptions;
-	}
-
-	public void setDescriptions(List<Description> descriptions) {
-		this.descriptions = descriptions;
-	}
-
-	public List<Requirement> getRequirements() {
-		return requirements;
-	}
-
-	public void setRequirements(List<Requirement> requirements) {
-		this.requirements = requirements;
-	}
-
-	public List<Stack> getStacks() {
-		return stacks;
-	}
-
-	public void setStacks(List<Stack> stacks) {
-		this.stacks = stacks;
-	}
-	
-	public List<Benefit> getBenefits() {
-		return benefits;
-	}
-
-	public void setBenefits(List<Benefit> benefits) {
-		this.benefits = benefits;
 	}
 
 	public String getLogo() {
