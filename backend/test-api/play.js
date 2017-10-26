@@ -13,6 +13,7 @@ function getPositions() {
   })
   .then((res) => {
     var token = res.data.access_token;
+    console.log('TOKEN ' + token);
     return axios.get('http://localhost:8080/positions?access_token=' + token)
 
   }).then((res) => {

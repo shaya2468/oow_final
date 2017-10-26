@@ -12,23 +12,37 @@ export default class WooLoginPage extends React.Component {
     super(props);
 
     this.state = {
-      loggedIn: false
+      loggedIn: false,
+      userName: "",
+      password: ""
     };
   }
+
+  onUserNameChange = (e) => {
+    const userName = e.target.value;
+    this.setState(() => ({ userName }));
+  };
+
+  onPasswordChange = (e) => {
+    const password = e.target.value;
+    this.setState(() => ({ password }));
+  };
 
   startLogin = (e) => {
     AuthAPI.login('shaya', 'ajzner');
   };
 
-  onLoginSuccess = (e) => {
-    this.setState(() => ({ loggedIn: true }));
-    localStorage.setItem("token", "uyty");
-  };
-
   onSubmit = (e) => {
     e.preventDefault();
-
-    console.log('onSubmit !! done')
+    
+    AuthAPI.login(this.state.userName, this.state.password)
+    .then((res) => {
+      var token = res;
+      localStorage.setItem("token", token);
+      this.setState(() => ({ loggedIn: true }));
+    }).catch((e) => {
+      console.log(e);
+    })
   };
 
   render() {
@@ -41,16 +55,13 @@ export default class WooLoginPage extends React.Component {
       );
     }
     return (
-
-
-
       <div id="login-page">
         <form onSubmit={this.onSubmit}>
           <label >User name</label>
-          <input type="text" id="fname" name="firstname" required placeholder="User name"></input>
+          <input type="text" id="fname" name="firstname" required placeholder="User name" onChange={this.onUserNameChange} value={this.state.userName}></input>
 
           <label>Password</label>
-          <input type="password" id="lname" name="lastname" required placeholder="Password"></input>
+          <input type="password" id="lname" name="lastname" required placeholder="Password" onChange={this.onPasswordChange} value={this.state.password}></input>
 
           <input type="submit" value="Submit"></input>
         </form>
