@@ -6,4 +6,17 @@ const WooPositionPage = () => (
   </div>
 );
 
-export default WooPositionPage;
+export default class WooLoginPage extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    
+    return (
+      <div>position page woo</div>
+    );
+    
+    }
+}
