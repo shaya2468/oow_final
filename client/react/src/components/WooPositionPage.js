@@ -31,18 +31,20 @@ export default class WooLoginPage extends React.Component {
       )
     } else {
       return (
-        <WooTitle positionTitle={this.state.positionName}/>
+        <WooTitle positionTitle={this.state.positionName} companyLogo={this.state.companyLogo}/>
       );
     }
   }
 
   initState = (position) => {
-    let company = position.company.name;
+    let companyName = position.company.name;
     let positionName = position.name;
+    let companyLogo = position.company.logo;
     this.setState(() => ({ 
       isLoadingData: false,
-      companyName: company,
-      positionName: positionName
+      companyName,
+      positionName,
+      companyLogo
     }));
   };
 }

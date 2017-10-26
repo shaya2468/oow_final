@@ -3,7 +3,7 @@ import React from 'react';
 const WooTitle = (props) => (
     <div id="body-position">
     <div className="start-point">
-      <img id="company-logo" src="https://goo.gl/re5wjf"></img>
+      <img id="company-logo" src={props.companyLogo}></img>
       <div id="position-title-layout">
         <h1>{props.positionTitle}</h1>
         <div id="position-title-details">
