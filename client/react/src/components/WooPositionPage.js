@@ -13,14 +13,29 @@ export default class WooLoginPage extends React.Component {
       var data = res.data._embedded.positions[0]
       console.log(JSON.stringify(data));
     })
-        
-   };
+
+  };
 
   render() {
-    
+
     return (
-      <div>position page woo, Loading data please wait...</div>
+      <div id="body-position">
+        <div className="start-point">
+          <img id="company-logo" src="https://goo.gl/re5wjf"></img>
+          <div id="position-title-layout">
+            <h1>Senior Software Engineer</h1>
+            <div id="position-title-details">
+              <div className="title-single-detail">
+                <h1>0 days ago</h1>
+              </div>
+              <div className="title-single-detail">
+                <h1>Accepted</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     );
-    
-    }
+
+  }
 }
