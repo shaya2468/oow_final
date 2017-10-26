@@ -1,10 +1,6 @@
 import React from 'react';
+import AuthAPI from '../actions/auth';
 
-const WooPositionPage = () => (
-  <div>
-    This is the Position page!
-  </div>
-);
 
 export default class WooLoginPage extends React.Component {
 
@@ -12,10 +8,18 @@ export default class WooLoginPage extends React.Component {
     super(props);
   }
 
+  componentDidMount = () => {
+    AuthAPI.getData().then((res) => {
+      var data = res.data._embedded.positions[0]
+      console.log(JSON.stringify(data));
+    })
+        
+   };
+
   render() {
     
     return (
-      <div>position page woo</div>
+      <div>position page woo, Loading data please wait...</div>
     );
     
     }

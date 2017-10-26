@@ -28,7 +28,7 @@ module.exports = {
     // });
 
     return new Promise(function (resolve, reject) {
-      resolve('c060f979-9219-4dc4-9eda-66963cc3d61b');
+      resolve('e163008c-e62c-451f-a636-cae169d05a9d');
     });
 
   },
@@ -39,11 +39,6 @@ module.exports = {
       console.log('token is null');
       return;
     }
-    axios.get('http://localhost:8080/positions?access_token=' + token)
-    .then((res) => {
-      console.log(JSON.stringify(res.data))
-    }).catch((e) => {
-      console.log('error');
-    });;
+    return axios.get('http://localhost:8080/positions?access_token=' + token);
   }
 }
