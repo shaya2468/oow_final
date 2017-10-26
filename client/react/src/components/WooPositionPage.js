@@ -42,7 +42,7 @@ export default class WooLoginPage extends React.Component {
           <WooStandard standards={this.state.standards} note={this.state.note} companyName={this.state.companyName}/>
           <WooImportantActions/>
           <WooAddress address={this.state.address}/>
-          <WooWordyComponent/>
+          <WooWordyComponent about={this.state.about}/>
        </div>
       );
     }
@@ -57,6 +57,7 @@ export default class WooLoginPage extends React.Component {
     let standards = position.standards;
     let note = position.note;
     let address = company.address;
+    let about = company.about;
     this.setState(() => ({
       isLoadingData: false,
       companyName,
@@ -64,7 +65,8 @@ export default class WooLoginPage extends React.Component {
       companyLogo,
       standards,
       note,
-      address
+      address,
+      about
     }));
   };
 }
