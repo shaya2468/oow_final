@@ -2,6 +2,7 @@ import React from 'react';
 import AuthAPI from '../actions/auth';
 import WooTitle from './WooTitle';
 import WooMainPart from './WooMainPart';
+import WooStandard from './WooStandard';
 
 export default class WooLoginPage extends React.Component {
 
@@ -35,9 +36,8 @@ export default class WooLoginPage extends React.Component {
         <div id="body-position">
           <WooTitle positionName={this.state.positionName} companyLogo={this.state.companyLogo} />
           <WooMainPart companyName={this.state.companyName} positionName={this.state.positionName}/>
+          <WooStandard/>
        </div>
-
-
       );
     }
   }
