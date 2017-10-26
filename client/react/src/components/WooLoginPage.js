@@ -46,11 +46,11 @@ export default class WooLoginPage extends React.Component {
 
       <div id="login-page">
         <form onSubmit={this.onSubmit}>
-          <label htmlFor="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" required placeholder="Your name.."></input>
+          <label >User name</label>
+          <input type="text" id="fname" name="firstname" required placeholder="User name"></input>
 
-          <label htmlFor="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" required placeholder="Your last name.."></input>
+          <label>Password</label>
+          <input type="password" id="lname" name="lastname" required placeholder="Password"></input>
 
           <input type="submit" value="Submit"></input>
         </form>
