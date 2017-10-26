@@ -5,6 +5,7 @@ import WooMainPart from './WooMainPart';
 import WooStandard from './WooStandard';
 import WooImportantActions from './WooImportantActions';
 import WooAddress from './WooAddress';
+import WooWordyComponent from './WooWordyComponent';
 
 export default class WooLoginPage extends React.Component {
 
@@ -41,6 +42,7 @@ export default class WooLoginPage extends React.Component {
           <WooStandard standards={this.state.standards} note={this.state.note} companyName={this.state.companyName}/>
           <WooImportantActions/>
           <WooAddress address={this.state.address}/>
+          <WooWordyComponent/>
        </div>
       );
     }
