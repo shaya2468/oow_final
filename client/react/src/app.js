@@ -12,6 +12,7 @@ import 'react-dates/lib/css/_datepicker.css';
 import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 
+let firstRender = true;
 const store = configureStore();
 const jsx = (
   <Provider store={store}>
@@ -28,18 +29,32 @@ const renderApp = () => {
 
 ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
-firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-    store.dispatch(login(user.uid));
-    store.dispatch(startSetExpenses()).then(() => {
-      renderApp();
-      if (history.location.pathname === '/') {
-        history.push('/dashboard');
-      }
-    });
+
+if (firstRender){
+  firstRender = false;
+  renderApp();
+  if (true) {
+    if (history.location.pathname === '/') {
+      history.push('/dashboard');
+    }
   } else {
-    store.dispatch(logout());
-    renderApp();
     history.push('/');
   }
-});
+  
+}
+
+// firebase.auth().onAuthStateChanged((user) => {
+//   if (user) {
+//     store.dispatch(login(user.uid));
+//     store.dispatch(startSetExpenses()).then(() => {
+//       renderApp();
+      // if (history.location.pathname === '/') {
+      //   history.push('/dashboard');
+      // }
+//     });
+//   } else {
+//     store.dispatch(logout());
+//     renderApp();
+//     history.push('/');
+//   }
+// });

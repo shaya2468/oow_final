@@ -9,9 +9,8 @@ export const PrivateRoute = ({
   ...rest
 }) => (
     <Route {...rest} component={(props) => (
-      isAuthenticated ? (
+      localStorage.getItem("token") ? (
         <div>
-          <Header />
           <Component {...props} />
         </div>
       ) : (
