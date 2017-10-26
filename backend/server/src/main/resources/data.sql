@@ -23,7 +23,7 @@ values(30001, 'https://goo.gl/XRHURD', 20001);
 insert into image(id, url, company_id) 
 values(30002, 'https://goo.gl/DwY61N', 20001);
 insert into image(id, url, product_id) 
-values(30003, 'https://goo.gl/DwY61N', 60002);
+values(30003, 'https://goo.gl/mzzAtA', 60002);
 insert into image(id, url, title, link, press_id) 
 values(30004, 'https://goo.gl/5kbkSw', 'sub zero', 'some link', 90001);
 insert into image(id, url, title, link, press_id) 
@@ -32,6 +32,9 @@ insert into image(id, url, title, link, press_id)
 values(30006, 'https://goo.gl/gjBP1v', 'reptile', 'some link', 90001);
 insert into image(id, url, title, link, press_id) 
 values(30007, 'https://goo.gl/hn2JM8', 'raiden', 'some link', 90001);
+insert into image(id, url, product_id) 
+values(30008, 'https://goo.gl/5kbkSw', 60002);
+
 
 insert into position(id, name, note, company_id, product_id) 
 values(50002, 'Senior Software Engineer', 'We can relocate you to our Berlin office but with your current job position. There will be an option for you to get promoted after a short while.!', 20001, 60002);

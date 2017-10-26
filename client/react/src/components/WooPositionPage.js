@@ -47,6 +47,7 @@ export default class WooLoginPage extends React.Component {
               subtitle={this.state.product.title} 
               firstSentance={this.state.product.sentance1}
               secondSentance={this.state.product.sentance2}
+              twoImages={this.state.product.images}
               />
        </div>
       );

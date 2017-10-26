@@ -16,11 +16,21 @@ const WooWordyComponent = (props) => (
         {
             props.about && <BigPoint about={props.about} />
         }
+        {
+            props.twoImages && <TwoImages twoImages={props.twoImages}/>
+        }
 
         <div className="seperator-line"></div>
     </div>
 
 );
+
+const TwoImages = (props) => (
+    <div id="product-imgs">
+        <img src={props.twoImages[0].url}></img>
+        <img src={props.twoImages[1].url}></img>
+    </div>
+)
 
 const BigPoint = (props) => (
 
