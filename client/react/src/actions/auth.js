@@ -1,22 +1,10 @@
-import { firebase, googleAuthProvider } from '../firebase/firebase';
+var axios = require('axios')
 
-export const login = (uid) => ({
-  type: 'LOGIN',
-  uid
-});
+module.exports = {
 
-export const startLogin = () => {
-  return () => {
-    return firebase.auth().signInWithPopup(googleAuthProvider);
-  };
-};
-
-export const logout = () => ({
-  type: 'LOGOUT'
-});
-
-export const startLogout = () => {
-  return () => {
-    return firebase.auth().signOut();
-  };
-};
+  login:function (user, password) {
+    console.log('got this user name ' + user);
+    // var url = `${process.env.URL}users/login`;
+    // return axios.post(url, {email: email,password: password, name: "aaaaaa"});
+  }
+}

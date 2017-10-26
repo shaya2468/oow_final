@@ -1,4 +1,5 @@
 import React from 'react';
+import AuthAPI from '../actions/auth';
 
 import {
   Redirect,  Route,
@@ -15,11 +16,16 @@ export default class WooLoginPage extends React.Component {
     };
   }
 
+  startLogin = (e) => {
+    AuthAPI.login('shaya', 'ajzner');
+  };
+
   onLoginSuccess = (e) => {
-    console.log('login successfull');
     this.setState(() => ({ loggedIn:true }));
     localStorage.setItem("token", "uyty");
   };
+
+
 
   render() {
 
@@ -35,7 +41,7 @@ export default class WooLoginPage extends React.Component {
       
       <div>
         This is the LOGIN page! {this.state.loggedIn ? 'aaa' : 'bbb'}
-        <button onClick={this.onLoginSuccess}>login</button>
+        <button onClick={this.startLogin}>login</button>
       </div>
     )
     
