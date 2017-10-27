@@ -2,7 +2,7 @@ import React from 'react';
 
 const WooAddress = (props) => (
 
-    <div className="card">
+    <div className="card address-card">
         <div className="container address">
             <img className="full-img" src={props.address.image}></img>
             <h1>{props.address.city}</h1>

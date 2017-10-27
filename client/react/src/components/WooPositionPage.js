@@ -46,8 +46,14 @@ export default class WooLoginPage extends React.Component {
           <WooMainPart companyName={this.state.companyName} positionName={this.state.positionName}/>
           <WooStandard standards={this.state.standards} note={this.state.note} companyName={this.state.companyName}/>
           <WooImportantActions/>
-          <WooImages images={this.state.companyImages}/>
-          <WooAddress address={this.state.address}/>
+         
+          <div id="address-and-roller">
+            <WooImages images={this.state.companyImages}/>
+            <WooAddress address={this.state.address}/>
+          </div>
+          
+          
+          
           <WooWordyComponent about={this.state.about} title={"About us"} subtitle={this.state.about.title}/>
           <WooWordyComponent  title={"Our product"} 
               subtitle={this.state.product.title} 

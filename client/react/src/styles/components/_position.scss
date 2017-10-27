@@ -177,7 +177,7 @@ p{
 }
 
 .address >img{
-    max-height: 250px;
+    height: 250px;
     object-fit: cover;
 }
 
@@ -375,8 +375,41 @@ li > a{
         width: 30%;
     }
     
-    .address{
-        width: 30%;
+    // .address{
+    //     width: 30%;
+    // }
+
+
+    #address-and-roller{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        // align-items: center;
+        margin: 0 auto;
+
+    }
+    .image-gallery-image{
+        padding-bottom: 0;
+    }
+
+    .image-gallery{
+        width: 100%;
+        // display: inline-block;
+    }
+
+   .address-card{
+        width: 25vw;
+        height: 350px;
+    }
+
+    // .container-slider{
+    //     width: 70%;
+    //     // display: inline-block;
+    // }
+
+    .image-gallery-slides{
+        width: 65vw;
+        // border:1px solid purple;
     }
     
     #big-points-layout{
@@ -393,9 +426,16 @@ li > a{
         width: 30%;
         margin: 1rem;
     }
+
+    .image-gallery-slide img{
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .address{
+        margin:0;
+        padding: 0;
+        height: 100%;
+    }
   }
 
-  @media (min-width: 900px){
-
-
-  }
