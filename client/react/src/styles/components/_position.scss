@@ -16,6 +16,8 @@ p{
     margin: 0 auto;
 }
 
+
+
 .c1, .c2, .c3, .c4, .c5, .start-point {
     width: 100%;
     /* formatting */
@@ -196,7 +198,7 @@ p{
 
 #product-imgs > img{
     width: 45%;
-    max-height: 200px;
+    max-height: 300px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -279,7 +281,7 @@ li > a{
 .single-press > img{
     width: 100%;
     object-fit: cover;
-    height: 200px;
+    height: 300px;
 }
 
 .press-text-layout{
@@ -330,3 +332,70 @@ li > a{
     margin: 2px 16px;
     margin-top: 1rem;
 }
+
+@media (min-width: 900px){
+    #body-position {
+      font-size: 18px;
+      border: 5px solid red;
+    }
+    
+    .full-img{
+        max-height: 400px;
+        object-fit: cover;
+    }
+    
+    #position-title-layout{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .standard-layout{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .single-standard{
+        width: 20%;
+    }
+    
+    #agreed-msg{
+        width: 100%;
+    }
+    
+    .main-actions {
+       display: flex;
+       justify-content: center;
+       width: 70
+    }
+    
+    .main-actions > button{
+        width: 30%;
+    }
+    
+    .address{
+        width: 30%;
+    }
+    
+    #big-points-layout{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    
+    .big-points{
+        width: 30%;
+    }
+    
+    .single-press{
+        width: 30%;
+        margin: 1rem;
+    }
+  }
+
+  @media (min-width: 900px){
+
+
+  }

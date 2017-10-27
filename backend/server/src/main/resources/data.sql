@@ -5,10 +5,10 @@ insert into press(id)
 values(90001);
 
 insert into about(id, title, employees_num, founded, funding) 
-values(80001, 'Yellow Leaf Hammocks tells users about its product by describing how the hammocks empower artisan weavers and their families, sit amet consectetu', 45, 2010, '5M$ in 7 rounds');
+values(80001, 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?', 45, 2010, '5M$ in 7 rounds');
 
 insert into product(id, title, sentance1, sentance2) 
-values(60002, 'killer title Lorem ipsum dolor, sit amet consectetu', 'killer first sentance Lorem ipsum dolor, sit amet consectetu', 'Second Sentance Lorem ipsum dolor, sit amet consectetu');
+values(60002, 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?');
 
 insert into company(id, name, logo, main_image, address_id, about_id, press_id) 
 values(20001,'Google', 'https://goo.gl/re5wjf', 'https://goo.gl/R9xakP', 40002, 80001, 90001);
@@ -52,19 +52,40 @@ insert into standard(id, name, met, position_id)
 values(70001,'Preferred Salary', true, 50002);
 insert into standard(id, name, met, position_id)
 values(70002,'Relocation', true, 50002);
+
 insert into standard(id, name, met, position_id)
-values(70003,'Company Speciality', false, 50002);
+values(70003,'Company Speciality', true, 50002);
+insert into standard(id, name, met, position_id)
+values(70004,'Specific company', true, 50002);
+
+insert into standard(id, name, met, position_id)
+values(70005,'Ice cream', false, 50002);
+insert into standard(id, name, met, position_id)
+values(70006,'Daily Massages', false, 50002);
 
 
 insert into description(id, name, position_id) 
-values(11001,'Build cool stuff Lorem ipsum dolor, sit amet consectetu', 50002);
+values(11001,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?', 50002);
 insert into description(id, name, position_id) 
-values(11002,'Understand repeatable automated processes Lorem ipsum dolor, sit amet consectetu', 50002);
+values(11002,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?', 50002);
+insert into description(id, name, position_id) 
+values(11003,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?', 50002);
+insert into description(id, name, position_id) 
+values(11004,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?', 50002);
+insert into description(id, name, position_id) 
+values(11005,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?', 50002);
+insert into description(id, name, position_id) 
+values(11006,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?', 50002);
+insert into description(id, name, position_id) 
+values(11007,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?', 50002);
+insert into description(id, name, position_id) 
+values(11008,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?', 50002);
+
 
 insert into requirement(id, name, position_id) 
-values(22001,'Must - deep knowledge of Python Lorem ipsum dolor, sit amet consectetu', 50002);
+values(22001,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?', 50002);
 insert into requirement(id, name, position_id) 
-values(22002,'Advantage - experience with Celery Lorem ipsum dolor, sit amet consectetu', 50002);
+values(22002,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?', 50002);
 
 insert into stack(id, name, position_id) 
 values(33001,'Server side: Java', 50002);
