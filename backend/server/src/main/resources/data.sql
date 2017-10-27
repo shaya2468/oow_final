@@ -32,13 +32,13 @@ values(30005, 'https://goo.gl/DwY61N', 20001);
 insert into image(id, url, product_id) 
 values(30006, 'https://goo.gl/mzzAtA', 60002);
 insert into image(id, url, title, link, press_id) 
-values(30007, 'https://goo.gl/5kbkSw', 'sub zero', 'some link', 90001);
+values(30007, 'https://goo.gl/dtTUjr', 'Kung lao', 'some link', 90001);
 insert into image(id, url, title, link, press_id) 
-values(30008, 'https://goo.gl/mzzAtA', 'scorpion', 'some link', 90001);
+values(30008, 'https://goo.gl/yqJrVB', 'GORO', 'some link', 90001);
 insert into image(id, url, title, link, press_id) 
 values(30009, 'https://goo.gl/gjBP1v', 'reptile', 'some link', 90001);
 insert into image(id, url, title, link, press_id) 
-values(300010, 'https://goo.gl/hn2JM8', 'raiden', 'some link', 90001);
+values(300010, 'https://goo.gl/suFVsk', 'JAX', 'some link', 90001);
 insert into image(id, url, product_id) 
 values(300011, 'https://goo.gl/5kbkSw', 60002);
 
