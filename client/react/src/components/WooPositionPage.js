@@ -48,8 +48,8 @@ export default class WooLoginPage extends React.Component {
           <WooImportantActions/>
          
           <div id="address-and-roller">
-            <WooImages images={this.state.companyImages}/>
             <WooAddress address={this.state.address}/>
+            <WooImages images={this.state.companyImages}/>
           </div>
           
           
