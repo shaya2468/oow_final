@@ -10,6 +10,7 @@ import WooImages from './WooImages';
 import WooList from './WooList';
 import WooImagesList from './WooImagesList';
 import WooLinksList from './WooLinksList';
+import WooBottomBar from './WooBottomBar';
 
 export default class WooLoginPage extends React.Component {
 
@@ -66,6 +67,7 @@ export default class WooLoginPage extends React.Component {
             />
             <WooImagesList images={this.state.pressImages}/>
             <WooLinksList links={this.state.links}/>
+            <WooBottomBar/>
        </div>
       );
     }
