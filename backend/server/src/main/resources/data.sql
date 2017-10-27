@@ -49,9 +49,9 @@ insert into position(id, name, note, company_id, product_id)
 values(50002, 'Senior Software Engineer', 'We can relocate you to our Berlin office but with your current job position. There will be an option for you to get promoted after a short while.!', 20001, 60002);
 
 insert into standard(id, name, met, position_id)
-values(70001,'Preferred Salary', true, 50002);
+values(70001,'Million Dollar Bonus', true, 50002);
 insert into standard(id, name, met, position_id)
-values(70002,'Relocation', true, 50002);
+values(70002,'Dog Friendly', true, 50002);
 
 insert into standard(id, name, met, position_id)
 values(70003,'Company Speciality', true, 50002);
