@@ -58,6 +58,10 @@ export default class WooLoginPage extends React.Component {
             title={"About the " + this.state.positionName + " position"} 
             unorderedList={this.state.stacks} unorderedListTitle={"Tech Stack"}
             />
+            <WooList 
+              title={"Benefits and Perks"} 
+              unorderedList={this.state.benefits} unorderedListTitle={""}
+              />
        </div>
       );
     }
@@ -77,7 +81,8 @@ export default class WooLoginPage extends React.Component {
     let descriptionsList = position.descriptions;
     let requirementsList = position.requirements;
     let companyImages = company.images;
-    let stacks = position.stacks
+    let stacks = position.stacks;
+    let benefits = position.benefits;
     this.setState(() => ({
       isLoadingData: false,
       companyName,
@@ -91,7 +96,8 @@ export default class WooLoginPage extends React.Component {
       descriptionsList,
       requirementsList,
       companyImages,
-      stacks
+      stacks,
+      benefits
     }));
   };
 }

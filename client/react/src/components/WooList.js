@@ -6,6 +6,8 @@ const WooList = (props) => (
     <h1 className="section-title">{props.title}</h1>
 
     {
+        props.orderedLists?
+
         props.orderedLists.map((entry, index) => (
             <div key={index}>
                 <p className="list-title">{entry.listTitle}
@@ -19,6 +21,8 @@ const WooList = (props) => (
                 </ol>
             </div>
             ))
+            :
+            <div></div>
     }
 
     {
