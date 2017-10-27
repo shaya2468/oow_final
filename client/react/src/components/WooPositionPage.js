@@ -8,6 +8,7 @@ import WooAddress from './WooAddress';
 import WooWordyComponent from './WooWordyComponent';
 import WooImages from './WooImages';
 import WooList from './WooList';
+import WooImagesList from './WooImagesList';
 
 export default class WooLoginPage extends React.Component {
 
@@ -58,10 +59,11 @@ export default class WooLoginPage extends React.Component {
             title={"About the " + this.state.positionName + " position"} 
             unorderedList={this.state.stacks} unorderedListTitle={"Tech Stack"}
             />
-            <WooList 
-              title={"Benefits and Perks"} 
-              unorderedList={this.state.benefits} unorderedListTitle={""}
-              />
+          <WooList 
+            title={"Benefits and Perks"} 
+            unorderedList={this.state.benefits} unorderedListTitle={""}
+            />
+            <WooImagesList images={this.state.pressImages}/>
        </div>
       );
     }
@@ -83,6 +85,7 @@ export default class WooLoginPage extends React.Component {
     let companyImages = company.images;
     let stacks = position.stacks;
     let benefits = position.benefits;
+    let pressImages = company.press.images
     this.setState(() => ({
       isLoadingData: false,
       companyName,
@@ -97,7 +100,8 @@ export default class WooLoginPage extends React.Component {
       requirementsList,
       companyImages,
       stacks,
-      benefits
+      benefits,
+      pressImages
     }));
   };
 }
