@@ -21,8 +21,19 @@ const WooList = (props) => (
             ))
     }
 
-    
-  
+    {
+        <div>
+                <p className="list-title">{props.unorderedListTitle}
+                </p>
+                <ul>
+                    {
+                        props.unorderedList.map((entry, index) => (
+                            <li key={index}>{entry.name}</li>
+                        ))
+                    }
+                </ul>
+            </div>
+    }
     <div className="seperator-line"></div>
 </div>
 
