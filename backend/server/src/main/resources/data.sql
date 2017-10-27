@@ -20,15 +20,15 @@ values(10002,'instagram', 'www.instagram.com', 20001);
 
 
 insert into image(id, url, company_id) 
-values(30001, 'http://lorempixel.com/1000/600/nature/1/', 20001);
+values(30001, 'https://goo.gl/nAVwXP', 20001);
 insert into image(id, url, company_id) 
-values(30002, 'http://lorempixel.com/1000/600/nature/2/', 20001);
+values(30002, 'https://goo.gl/vuyKmc', 20001);
 insert into image(id, url, company_id) 
-values(30003, 'http://lorempixel.com/1000/600/nature/3/', 20001);
+values(30003, 'https://goo.gl/7MP9B6', 20001);
 insert into image(id, url, company_id) 
-values(30004, 'https://goo.gl/XRHURD', 20001);
+values(30004, 'https://goo.gl/bQ2k8X', 20001);
 insert into image(id, url, company_id) 
-values(30005, 'https://goo.gl/DwY61N', 20001);
+values(30005, 'http://i.dailymail.co.uk/i/pix/2017/03/12/23/3E35CDA700000578-4307110-Images_of_the_spectacular_skies_were_crammed_onto_Instagram_as_o-a-2_1489361570500.jpg', 20001);
 insert into image(id, url, product_id) 
 values(30006, 'https://goo.gl/mzzAtA', 60002);
 insert into image(id, url, title, link, press_id) 
