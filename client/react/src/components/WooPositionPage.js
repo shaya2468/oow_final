@@ -9,6 +9,7 @@ import WooWordyComponent from './WooWordyComponent';
 import WooImages from './WooImages';
 import WooList from './WooList';
 import WooImagesList from './WooImagesList';
+import WooLinksList from './WooLinksList';
 
 export default class WooLoginPage extends React.Component {
 
@@ -64,6 +65,7 @@ export default class WooLoginPage extends React.Component {
             unorderedList={this.state.benefits} unorderedListTitle={""}
             />
             <WooImagesList images={this.state.pressImages}/>
+            <WooLinksList links={this.state.links}/>
        </div>
       );
     }
@@ -85,7 +87,9 @@ export default class WooLoginPage extends React.Component {
     let companyImages = company.images;
     let stacks = position.stacks;
     let benefits = position.benefits;
-    let pressImages = company.press.images
+    let pressImages = company.press.images;
+    let links = company.links;
+    
     this.setState(() => ({
       isLoadingData: false,
       companyName,
@@ -101,7 +105,8 @@ export default class WooLoginPage extends React.Component {
       companyImages,
       stacks,
       benefits,
-      pressImages
+      pressImages,
+      links
     }));
   };
 }
