@@ -9,39 +9,27 @@ class WooImages extends React.Component {
 
     render() {
 
-        const images = [
-            {
-                original: 'http://lorempixel.com/1000/600/nature/1/',
-                thumbnail: 'http://lorempixel.com/250/150/nature/1/',
-            },
-            {
-                original: 'http://lorempixel.com/1000/600/nature/2/',
-                thumbnail: 'http://lorempixel.com/250/150/nature/2/'
-            },
-            {
-                original: 'http://lorempixel.com/1000/600/nature/3/',
-                thumbnail: 'http://lorempixel.com/250/150/nature/3/'
-            }
-        ]
+        var imagesRecived = this.props.images;
+        var imagesSend = [];
+
+        imagesRecived.forEach(function (entry) {
+            imagesSend.push({ original: entry.url, thumbnail: entry.url });
+        });
 
         return (
-
-            // <div className="card">
-                <div className="container-slider">
-                    <ImageGallery
-                        items={images}
-                        slideInterval={2000}
-                        showThumbnails={false}
-                        useBrowserFullscreen={false}
-                        showFullscreenButton={false}
-                        showPlayButton={false}
-                        showBullets={true}
-                        showNav={false}
-                        disableSwipe={false}
-                        onImageLoad={this.handleImageLoad} />
-                </div>
-            // </div>
-
+            <div className="container-slider">
+                <ImageGallery
+                    items={imagesSend}
+                    slideInterval={2000}
+                    showThumbnails={false}
+                    useBrowserFullscreen={false}
+                    showFullscreenButton={false}
+                    showPlayButton={false}
+                    showBullets={true}
+                    showNav={false}
+                    disableSwipe={false}
+                    onImageLoad={this.handleImageLoad} />
+            </div>
         );
     }
 

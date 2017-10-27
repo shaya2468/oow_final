@@ -43,7 +43,7 @@ export default class WooLoginPage extends React.Component {
           <WooMainPart companyName={this.state.companyName} positionName={this.state.positionName}/>
           <WooStandard standards={this.state.standards} note={this.state.note} companyName={this.state.companyName}/>
           <WooImportantActions/>
-          <WooImages/>
+          <WooImages images={this.state.companyImages}/>
           <WooAddress address={this.state.address}/>
           <WooWordyComponent about={this.state.about} title={"About us"} subtitle={this.state.about.title}/>
           <WooWordyComponent  title={"Our product"} 
@@ -75,6 +75,7 @@ export default class WooLoginPage extends React.Component {
     let product = position.product;
     let descriptionsList = position.descriptions;
     let requirementsList = position.requirements;
+    let companyImages = company.images;
     this.setState(() => ({
       isLoadingData: false,
       companyName,
@@ -86,7 +87,8 @@ export default class WooLoginPage extends React.Component {
       about,
       product,
       descriptionsList,
-      requirementsList
+      requirementsList,
+      companyImages
     }));
   };
 }
