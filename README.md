@@ -42,7 +42,7 @@ There are 2 folders:
 
 ### Client
 
-The main page of the application is called <root folder>/client/react/src/components/WooPositionPage.js.
+The main page of the application is called 'WooPositionPage.js.
 It contains the state of the web page. The rest of the classes in the 'components' folder are reusable react components.
 
 The AppRouter.js configures the private and public routes.
