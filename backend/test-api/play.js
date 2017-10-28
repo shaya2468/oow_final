@@ -7,8 +7,8 @@ function getPositions() {
     method: 'post',
     url: 'http://localhost:8080/oauth/token?grant_type=password&username=user&password=user',
     auth: {
-      username: 'my-trusted-client',
-      password: 'secret'
+      username: 'woo-client',
+      password: '123456'
     }
   })
   .then((res) => {
