@@ -17,7 +17,7 @@ function getPositions() {
     return axios.get('http://localhost:8080/positions?access_token=' + token)
 
   }).then((res) => {
-    console.log(JSON.stringify(res.data))
+    // console.log(JSON.stringify(res.data))
   }).catch((e) => {
     console.log('error');
     console.log(e.response.status);
