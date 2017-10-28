@@ -333,6 +333,10 @@ li > a{
     margin-top: 1rem;
 }
 
+.image-gallery-slide img{
+    height: 250px;
+}
+
 @media (min-width: 900px){
     #body-position {
       font-size: 18px;
