@@ -32,12 +32,12 @@ export default class WooStandard extends React.Component {
                         this.props.standards.map((entry, index) => (
                             entry.met 
                             ?
-                            <div className="single-standard standard-approve">
+                            <div key={index} className="single-standard standard-approve">
                                 <CheckSVG/><p key={index}>{entry.name}</p> 
                             </div>
                             
                             :
-                            <div className="single-standard standard-disapprove">
+                            <div key={index} className="single-standard standard-disapprove">
                                 <TimesSVG/><p key={index} >{entry.name}</p> 
                             </div>
                             

@@ -8,10 +8,10 @@ const WooTitle = (props) => (
         <h1>{props.positionName}</h1>
         <div id="position-title-details">
           <div className="title-single-detail">
-             <CalendarSVG/><h1>0 days ago</h1>
+             <CalendarSVG/><h1>{props.created}</h1>
           </div>
           <div className="title-single-detail">
-            <ClockSVG/><h1>Accepted</h1>
+            <ClockSVG/><h1>{props.accepted ? 'Accepted' : 'New'}</h1>
           </div>
         </div>
       </div>

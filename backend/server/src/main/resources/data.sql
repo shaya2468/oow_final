@@ -45,8 +45,8 @@ values(300011, 'https://goo.gl/5kbkSw', 60002);
 
 
 
-insert into position(id, name, note, company_id, product_id) 
-values(50002, 'Senior Software Engineer', 'We can relocate you to our Berlin office but with your current job position. There will be an option for you to get promoted after a short while.!', 20001, 60002);
+insert into position(id, accepted, created, name, note, company_id, product_id) 
+values(50002, true,  1509216048, 'Senior Software Engineer', 'We can relocate you to our Berlin office but with your current job position. There will be an option for you to get promoted after a short while.!', 20001, 60002);
 
 insert into standard(id, name, met, position_id)
 values(70001,'Million Dollar Bonus', true, 50002);

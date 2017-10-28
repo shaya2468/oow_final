@@ -11,7 +11,7 @@ export default class WooImagesList extends React.Component {
 
                     {
                         this.props.images.map((entry, index) => (
-                            <div className="single-press">
+                            <div key={index} className="single-press">
                                 <img src={entry.url}></img>
                                 <div className="press-text-layout">
                                     <h1>{entry.title}</h1>

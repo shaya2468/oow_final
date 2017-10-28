@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import AuthAPI from '../actions/auth';
 import WooTitle from './WooTitle';
 import WooMainPart from './WooMainPart';
@@ -40,9 +41,9 @@ export default class WooLoginPage extends React.Component {
         <div>Loading data, Please wait...</div>
       )
     } else {
-      return (
+      return ( 
         <div id="body-position">
-          <WooTitle positionName={this.state.positionName} companyLogo={this.state.companyLogo} />
+          <WooTitle positionName={this.state.positionName} companyLogo={this.state.companyLogo} accepted={this.state.accepted} created={moment(this.state.created * 1000).fromNow()}/>
           <WooMainPart companyName={this.state.companyName} positionName={this.state.positionName}/>
           <WooStandard standards={this.state.standards} note={this.state.note} companyName={this.state.companyName}/>
           <WooImportantActions/>
@@ -82,6 +83,8 @@ export default class WooLoginPage extends React.Component {
   initState = (position) => {
     let company = position.company;
 
+    let created = position.created;
+    let accepted = position.accepted;
     let companyName = company.name;
     let positionName = position.name;
     let companyLogo = company.logo;
@@ -100,6 +103,8 @@ export default class WooLoginPage extends React.Component {
     
     this.setState(() => ({
       isLoadingData: false,
+      accepted,
+      created,
       companyName,
       positionName,
       companyLogo,

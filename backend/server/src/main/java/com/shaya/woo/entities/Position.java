@@ -25,6 +25,10 @@ public class Position {
 
 	private String note;
 	
+	private Boolean accepted;
+	
+	private Integer created;
+	
 	@OneToMany(mappedBy = "position")
 	private List<Description> descriptions = new ArrayList<>();
 
@@ -46,9 +50,11 @@ public class Position {
 	protected Position() {
 	}
 
-	public Position(String name, String note) {
+	public Position(String name, String note, Boolean accepted, Integer created) {
 		this.name = name;
 		this.note = note;
+		this.accepted = accepted;
+		this.created = created;
 	}
 	
 	public List<Requirement> getRequirements() {
@@ -121,5 +127,21 @@ public class Position {
 
 	public void setBenefits(List<Benefit> benefits) {
 		this.benefits = benefits;
+	}
+	
+	public Integer getCreated() {
+		return created;
+	}
+
+	public void setCreated(Integer created) {
+		this.created = created;
+	}
+
+	public Boolean getAccepted() {
+		return accepted;
+	}
+
+	public void setAccepted(Boolean accepted) {
+		this.accepted = accepted;
 	}
 }
