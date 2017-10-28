@@ -60,12 +60,21 @@ p{
 #position-title-details .title-single-detail{
     margin-left: 1rem;
     color: rgb(157, 157, 157);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+     margin-right: 1.5rem;
+}
+
+.position-svg{
+    height: 1rem;
+    width:1rem;
+    margin-right:0.4rem;
 }
 
 #main-part{
     width: 100%;
-    /* formatting */
-    /* height: 240px; */
     padding: 1rem;
 }
 
