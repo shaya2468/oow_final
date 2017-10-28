@@ -93,8 +93,8 @@ insert into stack(id, name, position_id)
 values(33002,'Front end: React', 50002);
 
 insert into benefit(id, name, position_id) 
-values(44001,'Ability to work independently Lorem ipsum dolor, sit amet consectetu', 50002);
+values(44001,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?', 50002);
 insert into benefit(id, name, position_id) 
-values(44002,'Portfolio of code you have Lorem ipsum dolor, sit amet consectetu', 50002);
+values(44002,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur sequi, reiciendis ad, ea nostrum excepturi enim maiores voluptate minus eveniet numquam pariatur quisquam maxime corrupti tempore adipisci explicabo voluptatibus?', 50002);
 
 
