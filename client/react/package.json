@@ -1,8 +1,8 @@
 {
-  "name": "expensify",
+  "name": "woo",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Andrew Mead",
+  "author": "Shaya Ajzner",
   "license": "MIT",
   "scripts": {
     "build:dev": "webpack",
