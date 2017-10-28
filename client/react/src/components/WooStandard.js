@@ -32,9 +32,15 @@ export default class WooStandard extends React.Component {
                         this.props.standards.map((entry, index) => (
                             entry.met 
                             ?
-                            <p key={index}className="single-standard standard-approve">{entry.name}</p> 
+                            <div className="single-standard standard-approve">
+                                <CheckSVG/><p key={index}>{entry.name}</p> 
+                            </div>
+                            
                             :
-                            <p key={index} className="single-standard standard-disapprove">{entry.name}</p> 
+                            <div className="single-standard standard-disapprove">
+                                <TimesSVG/><p key={index} >{entry.name}</p> 
+                            </div>
+                            
                           ))
                     }
                     
@@ -49,6 +55,17 @@ export default class WooStandard extends React.Component {
 
 }
 
+const CheckSVG = () => (
+    <div>
+        <svg className="svg-standard" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg>
+    </div>
+  );
+
+  const TimesSVG = () => (
+    <div>
+    <svg className="svg-standard" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z"/></svg>
+    </div>
+  );
 
 
 
