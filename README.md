@@ -5,7 +5,7 @@
 
 ## Section 1: Running on your local machine
 
-####Prerequisites
+### Prerequisites
 1. yarn is installed
 2. eclipse with java installed
 3. The project is downloaded: git clone https://github.com/shaya2468/oow_final
