@@ -37,10 +37,11 @@ export default class WooLoginPage extends React.Component {
     
     AuthAPI.login(this.state.userName, this.state.password)
     .then((res) => {
-      var token = res;
+      var token = res.data.access_token;
       localStorage.setItem("token", token);
       this.setState(() => ({ loggedIn: true }));
     }).catch((e) => {
+      console.log('got a damn error')
       console.log(e);
     })
   };
