@@ -7,8 +7,8 @@ module.exports = {
       method: 'post',
       url: 'http://localhost:8080/oauth/token?grant_type=password&username=user&password=user',
       auth: {
-        username: 'my-trusted-client',
-        password: 'secret'
+        username: user,
+        password: password
       }
     })
   },
